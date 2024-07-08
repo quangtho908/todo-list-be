@@ -1,0 +1,33 @@
+{
+  "name": "todo-list-be",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --build",
+    "start": "yarn build && node dist/index.js",
+    "dev": "nodemon --watch src -e ts dist/index.js"
+  },
+  "nodemonConfig": {
+    "exec": "yarn build && node"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "better-sqlite3": "^11.1.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "reflect-metadata": "^0.2.2",
+    "ts-node": "^10.9.2",
+    "typeorm": "^0.3.20"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.9",
+    "@types/supertest": "^6.0.2",
+    "nodemon": "^3.1.4",
+    "supertest": "^7.0.0",
+    "typescript": "^5.5.3"
+  }
+}
