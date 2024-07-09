@@ -28,7 +28,7 @@ export class TasksModule {
             data
           })
         } catch (exeption) {
-          res.json(exeption)
+          res.status((exeption as BaseException).status).json(exeption)
         }
 
       })
